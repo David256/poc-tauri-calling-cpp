@@ -1,0 +1,40 @@
+{
+  "build": {
+    "beforeDevCommand": "bun run dev",
+    "beforeBuildCommand": "bun run build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "tauri-calling-cpp",
+    "version": "0.0.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      }
+    },
+    "windows": [
+      {
+        "title": "PoC of Tauri calling C++ functions",
+        "width": 800,
+        "height": 600,
+        "resizable": false
+      }
+    ],
+    "security": {
+      "csp": null
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "com.tauri.dev",
+      "icon": [
+        "icons/icon.png"
+      ]
+    }
+  }
+}
